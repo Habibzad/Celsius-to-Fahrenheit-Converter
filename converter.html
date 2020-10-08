@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Converter</title>
+    <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Convert Celsius to Fahrenheit </h2>
+        <input type="text" id="userInput"><br>
+        <input id="btn" type="submit" value="Convert">
+        <h3 id="result"></h3>
+    </div>
+    <sup></sup>
+
+<script>
+        document.querySelector("#btn").addEventListener("click", ()=>{
+        let userInput = document.querySelector("#userInput").value;
+        let result = document.querySelector("#result");
+        let outPut = userInput * 9/5 + 32;
+        console.log(outPut);
+        result.innerHTML= `${userInput} <sup>&deg</sup>C = ${outPut} <sup>&deg</sup>F`;
+    })
+</script>
+</body>
+</html>
